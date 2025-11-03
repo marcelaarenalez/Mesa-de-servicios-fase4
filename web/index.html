@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mesa de Servicios - TechServices S.A.S</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mesa de Servicios - TechServices S.A.S</h1>
+    <nav>
+      <button onclick="mostrar('inicio')">Inicio</button>
+      <button onclick="mostrar('tickets')">Tickets</button>
+      <button onclick="mostrar('estadisticas')">Estadísticas</button>
+      <button onclick="mostrar('contacto')">Contacto</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="visible">
+      <h2>Bienvenido</h2>
+      <p>Simulación de una Mesa de Servicios desarrollada con HTML, CSS y JavaScript.</p>
+    </section>
+
+    <section id="tickets">
+      <h2>Gestión de Tickets</h2>
+      <form id="formTicket">
+        <label>Asunto:</label>
+        <input type="text" id="asunto" required />
+
+        <label>Categoría:</label>
+        <select id="categoria">
+          <option>Incidente</option>
+          <option>Solicitud</option>
+          <option>Problema</option>
+        </select>
+
+        <label>Descripción:</label>
+        <textarea id="descripcion" required></textarea>
+
+        <button type="submit">Crear Ticket</button>
+      </form>
+
+      <h3>Tickets registrados:</h3>
+      <ul id="listaTickets"></ul>
+    </section>
+
+    <section id="estadisticas">
+      <h2>Estadísticas</h2>
+      <p>Total de tickets: <span id="totalTickets">0</span></p>
+      <p>Último ticket creado: <span id="ultimoTicket">Ninguno</span></p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Correo: soporte@techservices.com</p>
+      <p>Teléfono: (57) 300 123 4567</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 TechServices S.A.S - Proyecto Mesa de Servicios</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
